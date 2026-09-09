@@ -25,3 +25,9 @@ for i in range(kuadran%4) :
 cv2.imwrite(f"Transformasi Geometri Image/Hasil/Rotasi {derajat} {filename}",img1)
 
 print("Rampung")
+
+""" 
+    Batasan Batasan Program :
+    1. Hanya bisa menerima input derajat rotasi kelipatan 90
+    2. Rotasi selalu mengarah berlawanan dengan arah jarum jam, tidak bisa berotasi kearah sebaliknya
+"""

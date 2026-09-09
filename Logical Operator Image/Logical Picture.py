@@ -158,3 +158,9 @@ img3 = np.array(img3)
 cv2.imwrite('Logical Operator Image/Hasil/(A Gabungan B) Komplemen Gabungan (A Irisan B).png', img3)
 
 print("Rampung")
+
+"""
+    Batasan Batasan Program :
+    1. Background Wajib Putih True White (255,255,255) , warna selain ini akan dianggap benda, bukan Background
+    2. Kedua ukuran gambar harus sama, Program tidak menyediakan penyesuaian ukuran gambar pada 2 gambar yang berbeda ukuran
+"""

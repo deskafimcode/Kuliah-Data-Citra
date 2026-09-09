@@ -36,3 +36,9 @@ for i in range(0,img2.shape[0]-akar_skala,akar_skala) :
                 
 cv2.imwrite(f"Math Operator Image/Hasil/{perbesaran}x{filename}", img2)
 print("Rampung")
+
+"""
+    Batasan Batasan Program :
+    1. Input perbesaran wajib bilangan kuadrat dan positif
+    2. Program tidak menyediakan perbesaran < 1 (Ukuran Diperkecil)
+"""

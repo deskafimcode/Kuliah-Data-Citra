@@ -27,4 +27,8 @@ for i in range(img2.shape[0]) :
 cv2.imwrite(f"Transformasi Geometri Image/Hasil/Refleksi V{vertikal} H{horizontal} {filename}",img2)
 
 print("Rampung")
-        
+
+""" 
+    Batasan Batasan Program :
+    1. Hanya dapat refleksi terhadap sumbu-Y dan sumbu-X (Horizontal dan Vertikal), Tidak menerima input terhadap refleksi persamaan garis
+"""

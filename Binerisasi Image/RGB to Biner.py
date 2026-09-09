@@ -37,3 +37,8 @@ for i in range(a) :
 cv2.imwrite(f"Binerisasi Image/Hasil/Biner_{filename}",img3)
 
 print("Rampung")
+
+""" 
+    Batasan Batasan Program :
+    1. Threshold atau Batas Binerisasi sangat dipengaruhi oleh Outlier sehingga dapat menyebabkan Binarization Failure
+"""

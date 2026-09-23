@@ -4,7 +4,6 @@ import numpy as np
 filename = "trapezoid_10.png"
 
 img1 = cv2.imread(f'Dataset/Gambar Geometri/{filename}')
-
 img2 = np.zeros(img1.shape)
 
 vektor_translasi = [50,0]
@@ -19,8 +18,3 @@ for i in range(img2.shape[0]) :
 cv2.imwrite(f"Transformasi Geometri Image/Hasil/Translasi {vektor_translasi} {filename}",img2)
 
 print("Rampung")
-
-""" 
-    Batasan Batasan Program :
-    1. -         
-"""        

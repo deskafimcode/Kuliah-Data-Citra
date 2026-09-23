@@ -9,13 +9,13 @@ def rotasi(img) :
     return img_new
 
 filename = "Dog.jpg"
-
 img1 = cv2.imread(f'Dataset/Gambar Non Geometri/{filename}')
 
 derajat = 270
 
 if derajat % 90 != 0 :
     print("Sudut Perputaran Tidak Valid")
+    exit()
 
 kuadran = int(derajat/90)
 

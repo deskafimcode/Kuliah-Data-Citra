@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt 
 
 filename = "Dog.jpg"
 
@@ -29,3 +30,8 @@ cv2.imwrite(
 )
 
 print("Selesai")
+
+plt.imshow(img2, cmap="gray")
+plt.title("Grayscale")
+plt.axis("off")
+plt.show()

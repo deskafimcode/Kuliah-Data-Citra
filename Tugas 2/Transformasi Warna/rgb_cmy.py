@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt 
 
 filename = "Dog.jpg"
 
@@ -35,3 +36,30 @@ cv2.imwrite(
 )
 
 print("selesai")
+C = img2[:,:,0]
+M = img2[:,:,1]
+Y = img2[:,:,2]
+
+plt.figure(figsize=(12,8))
+
+plt.subplot(2,2,1)
+plt.imshow(img2)
+plt.title("Hasil CMY")
+plt.axis("off")
+
+plt.subplot(2,2,2)
+plt.imshow(C, cmap="gray")
+plt.title("Cyan (C)")
+plt.axis("off")
+
+plt.subplot(2,2,3)
+plt.imshow(M, cmap="gray")
+plt.title("Magenta (M)")
+plt.axis("off")
+
+plt.subplot(2,2,4)
+plt.imshow(Y, cmap="gray")
+plt.title("Yellow (Y)")
+plt.axis("off")
+
+plt.show()

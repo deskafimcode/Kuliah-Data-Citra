@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt 
 
 filename = "Dog.jpg"
 
@@ -33,3 +34,31 @@ cv2.imwrite(
 )
 
 print("selesai")
+
+Y = img2[:,:,0]
+Cb = img2[:,:,1]
+Cr = img2[:,:,2]
+
+plt.figure(figsize=(12,8))
+
+plt.subplot(2,2,1)
+plt.imshow(cv2.cvtColor(img2, cv2.COLOR_YCrCb2RGB))
+plt.title("Hasil YCbCr")
+plt.axis("off")
+
+plt.subplot(2,2,2)
+plt.imshow(Y, cmap="gray")
+plt.title("Y (Luminance)")
+plt.axis("off")
+
+plt.subplot(2,2,3)
+plt.imshow(Cb, cmap="gray")
+plt.title("Cb")
+plt.axis("off")
+
+plt.subplot(2,2,4)
+plt.imshow(Cr, cmap="gray")
+plt.title("Cr")
+plt.axis("off")
+
+plt.show()

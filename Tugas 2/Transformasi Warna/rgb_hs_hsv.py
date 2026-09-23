@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import matplotlib.pyplot as plt 
 
 filename = "Dog.jpg"
 
@@ -58,3 +59,31 @@ cv2.imwrite(
 )
 
 print("selesai")
+
+H = img2[:,:,0]
+S = img2[:,:,1]
+V = img2[:,:,2]
+
+plt.figure(figsize=(12,8))
+
+plt.subplot(2,2,1)
+plt.imshow(cv2.cvtColor(img2, cv2.COLOR_HSV2RGB))
+plt.title("Hasil HSV")
+plt.axis("off")
+
+plt.subplot(2,2,2)
+plt.imshow(H, cmap="gray")
+plt.title("Hue (H)")
+plt.axis("off")
+
+plt.subplot(2,2,3)
+plt.imshow(S, cmap="gray")
+plt.title("Saturation (S)")
+plt.axis("off")
+
+plt.subplot(2,2,4)
+plt.imshow(V, cmap="gray")
+plt.title("Value (V)")
+plt.axis("off")
+
+plt.show()

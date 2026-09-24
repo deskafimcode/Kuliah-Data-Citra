@@ -15,15 +15,28 @@ a, b, _ = img1.shape
 # print(f"Selesai! Disimpan ke: {save_path_cmy}")
 
 # Display
-C = np.zeros((a,b,3))
-M = np.zeros((a,b,3))
-Y = np.zeros((a,b,3))
-C[:,:,1] = img1[:, :, 1] //2
-C[:,:,2] = img1[:, :, 2] //2
-M[:,:,0] = img1[:, :, 0] //2
-M[:,:,2] = img1[:, :, 2] //2
-Y[:,:,0] = img1[:, :, 0] //2
-Y[:,:,1] = img1[:, :, 1] //2
+C = np.zeros((a,b,3),dtype=np.uint8)
+M = np.zeros((a,b,3),dtype=np.uint8)
+Y = np.zeros((a,b,3),dtype=np.uint8)
+for i in range (a) :
+    for j in range (b) :
+        C[i,j,1] = (int(img1[i,j, 1])+int(img1[i,j, 2])) // 2
+        C[i,j,2] = (int(img1[i,j, 1])+int(img1[i,j, 2])) // 2
+for i in range (a) :
+    for j in range (b) :
+        M[i,j,0] = (int(img1[i,j, 0])+int(img1[i,j, 2])) // 2
+        M[i,j,2] = (int(img1[i,j, 0])+int(img1[i,j, 2])) // 2
+for i in range (a) :
+    for j in range (b) :
+        Y[i,j,1] = (int(img1[i,j, 1])+int(img1[i,j, 0])) // 2
+        Y[i,j,0] = (int(img1[i,j, 1])+int(img1[i,j, 0])) // 2
+        
+# C[:,:,1] = img1[:, :, 1]
+# C[:,:,2] = img1[:, :, 2]
+# M[:,:,0] = img1[:, :, 0] 
+# M[:,:,2] = img1[:, :, 2]
+# Y[:,:,0] = img1[:, :, 0]
+# Y[:,:,1] = img1[:, :, 1]
 
 plt.figure(figsize=(12, 8))
 

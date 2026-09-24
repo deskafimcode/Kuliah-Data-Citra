@@ -18,16 +18,21 @@ a, b, _ = img1.shape
 R = np.zeros((a,b,3),dtype=np.uint8)
 G = np.zeros((a,b,3),dtype=np.uint8)
 B = np.zeros((a,b,3),dtype=np.uint8)
+img2 = np.zeros((a,b,3),dtype=np.uint8)
 
-R[:,:,0] = img1[:, :, 0] 
+img2[:,:,0] = img1[:, :, 2] 
+img2[:,:,1] = img1[:, :, 1]
+img2[:,:,2] = img1[:, :, 0]
+
+R[:,:,0] = img1[:, :, 2] 
 G[:,:,1] = img1[:, :, 1]
-B[:,:,2] = img1[:, :, 2]
+B[:,:,2] = img1[:, :, 0]
 
 
 plt.figure(figsize=(12, 8))
 
 plt.subplot(2, 2, 1)
-plt.imshow(img1)
+plt.imshow(img2)
 plt.title("Gambar Asli")
 plt.axis("off")
 
